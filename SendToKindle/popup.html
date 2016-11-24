@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Send To Kindle
+		</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+	</head>
+	<style type="text/css">
+		body {
+			width: 320px;
+			padding: 0 20px;
+		}
+		label {
+			margin-right: 20px;
+		}
+	</style>
+<body>
+<div id="content">
+	<div class="page-header">
+	  <h4>kindle邮箱地址：</h4>
+	  	<label id="kindle_email"></label>
+	  <button id="modify_btn" type="button" class="btn btn-success">修改</button>
+	</div>
+	<div id="edit_email" class="row">
+	  <div class="col-lg-6">
+	    <div class="input-group">
+	      <input id="email" type="text" class="form-control">
+	      <span class="input-group-btn">
+	        <button id="go_btn" class="btn btn-default" type="button">Go!</button>
+	      </span>
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+	</br>
+	<div id="alert-warning" class="alert alert-warning alert-dismissible" role="alert">
+	  <button id="close_btn" type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	  <strong>Warning!</strong> 请输入正确的邮箱地址
+	</div>
+</div>
+</body>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="popup.js"></script>
+</html>

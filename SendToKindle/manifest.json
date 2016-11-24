@@ -1,0 +1,36 @@
+﻿{
+	"manifest_version": 2,
+	"name": "SendToKindle",
+	"author":"xiaolonghust",
+	"version": "0.0.1",
+	"background": { "scripts": ["background.js"] },
+	"permissions": ["tabs","contextMenus","*://*/*"],
+	"browser_action": {
+		"default_icon": {
+			"16": "images/kindle_16.png",
+			"19": "images/kindle_19.png",
+			"38": "images/kindle_38.png"
+		},
+		"default_title": "cnblogs.com article information",
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "images/kindle_16.png",
+		"49": "images/kindle_49.png",
+		"128": "images/kindle_128.png"
+    },
+    "content_scripts": [
+		{
+		"matches":["*://*.cnblogs.com/*"],
+		"js": ["jquery-3.1.1.min.js","content_cnblogs.js"]
+		},
+		{
+		"matches":["*://*.csdn.net/*"],
+		"js": ["jquery-3.1.1.min.js","content_csdn.js"]
+		},
+		{
+		"matches":["*://*.jianshu.com/*"],
+		"js": ["jquery-3.1.1.min.js","content_jianshu.js"]
+		}
+	]
+}
